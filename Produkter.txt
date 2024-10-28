@@ -1,5 +1,5 @@
 300,Banan,kg,23
-301,kiwi,styck,11
+301,kiwi,st,11
 302,naturgodis,kg,149
-303,citron,styck,8
+303,citron,st,8
 304,apelsin,kg,27

@@ -19,7 +19,7 @@ class Kassasystem:
         try:
             with open(filnamn, "r") as file:
                 for line in file:
-                    produktid, namn, pris_typ, pris = line.strip().split(",")
+                    produktid, namn, pris_typ, pris = line.strip().split(",") 
                     produkter.append(Produkter(int(produktid), namn, pris_typ, int(pris)))
         except FileNotFoundError:
             print(f"Filen {filnamn} hittades inte.")
@@ -46,8 +46,8 @@ class Kassasystem:
     def betala(self): 
         if not self.kundkorg:
             print("Kundkorgen är tom! Finns inget att betala")
-            
-       
+            return
+        
         total_summa = 0
         print("Kvitto: ")
         print("-" * 20)
@@ -89,7 +89,6 @@ def meny():
                     kassa.betala()
                     time.sleep(1)
                     return
- 
                 else:
                     try:
                         produktid, antal = choice.split() 
